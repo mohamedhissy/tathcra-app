@@ -1,9 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tathkra_app/features/auth/presentaion/view/email_view.dart';
 import 'package:tathkra_app/features/auth/presentaion/view/login_view.dart';
+import 'package:tathkra_app/features/home/presentaion/view/home_view.dart';
 import '../config/dependancy_injection.dart';
 import '../core/resources/manager_strings.dart';
 import '../features/auth/presentaion/view/register_view.dart';
+import '../features/auth/presentaion/view/reset_password_view.dart';
 import '../features/auth/presentaion/view/verification_code_view.dart';
 import '../features/out_boarding/presentaion/view/out_boarding_view.dart';
 
@@ -18,6 +21,8 @@ class Routes {
   static const String cartView = '/cart_view';
   static const String brandView = '/view_details';
   static const String verificationCodeView = '/verification_code_view';
+  static const String emailView = '/email_view';
+  static const String resetPasswordView = '/reset_password_view';
 
 }
 
@@ -33,6 +38,12 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const RegisterView());
       case Routes.verificationCodeView:
         return MaterialPageRoute(builder: (_) => const VerificationCodeView());
+      case Routes.emailView:
+        return MaterialPageRoute(builder: (_) => const EmailView());
+      case Routes.resetPasswordView:
+        return MaterialPageRoute(builder: (_) => const ResetPasswordView());
+      case Routes.homeView:
+        return MaterialPageRoute(builder: (_) => const HomeView());
       default:
         return unDefineRoute();
     }

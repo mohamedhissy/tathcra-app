@@ -26,4 +26,10 @@ class ManagerStrings {
   static const String weSentADigitCodeTo = 'ارسلنا رمز من 4 أرقام على';
   static const String sendAgain = 'ارسال مجدداً';
   static const String verification = 'تحقق';
+  static const String enterYourEmail1 = 'ادخل بريدك الالكتروني';
+  static const String sendVerificationCode = 'ارسال رمز التحقق';
+  static const String newPassword = 'كلمة المرور الجديد';
+  static const String enterTheNewPassword = 'ادخل كلمة المرور الجديدة ';
+  static const String reEnterTheNewPassword = 'اعد ادخال كلمة المرور الجديدة';
+  static const String changePassword = 'تغيير كلمة السر';
 }
