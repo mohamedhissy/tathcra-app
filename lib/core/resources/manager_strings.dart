@@ -1,0 +1,29 @@
+class ManagerStrings {
+  static const String appName = 'تذكرة';
+  static const String start = 'start';
+  static const String notFoundRoute = 'Not Found Route';
+  static const String welcomeTo  = ' أهلاً بك في';
+  static const String guestLogin  = 'دخول كزائر';
+  static const String login  = 'تسجيل دخول';
+  static const String createANewAccount  = 'انشاء حساب جديد';
+  static const String enterYourEmailAndPassword  = 'ادخل البريد الالكتروني وكلمة السر';
+  static const String password  = 'كلمة السر';
+  static const String email  = 'البريد الالكتروني';
+  static const String dontHaveAnAccount  = 'ليس لدي حساب';
+  static const String signUp  = 'انشاء حساب';
+  static const String forgotYourPassword = 'نسيت كلمة السر ؟';
+  static const String signInWithGoogle = 'تسجيل دخول بواسطة جوجل';
+  static const String g = 'G';
+  static const String name = 'الاسم';
+  static const String fullName = 'الاسم الكامل';
+  static const String phone = 'رقم الهاتف';
+  static const String enterYourPhone = 'اكتب رقم هاتفك';
+  static const String enterYourEmail = 'اكتب بريدك الالكتروني';
+  static const String enterThePassword = 'اكتب كلمة السر ';
+  static const String haveAnAccount = 'لديك حساب سابق ؟';
+  static const String signIn = 'تسجيل';
+  static const String enterTheVerificationCode = 'ادخل رمز التحقق';
+  static const String weSentADigitCodeTo = 'ارسلنا رمز من 4 أرقام على';
+  static const String sendAgain = 'ارسال مجدداً';
+  static const String verification = 'تحقق';
+}
