@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
 import 'package:tathkra_app/routes/routes.dart';
 import 'config/dependancy_injection.dart';
-import 'core/resources/manager_colors.dart';
+
 
 void main() async {
   await initModule();
@@ -16,6 +17,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      localizationsDelegates: const [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: const [
+        Locale('ar'),
+        Locale('en'),
+      ],
       debugShowCheckedModeBanner: false,
       initialRoute: Routes.homeView,
       onGenerateRoute: RouteGenerator.getRoute,

@@ -43,6 +43,7 @@ class RouteGenerator {
       case Routes.resetPasswordView:
         return MaterialPageRoute(builder: (_) => const ResetPasswordView());
       case Routes.homeView:
+        initHome();
         return MaterialPageRoute(builder: (_) => const HomeView());
       default:
         return unDefineRoute();

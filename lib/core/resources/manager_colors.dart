@@ -41,5 +41,6 @@ class ManagerColors {
   static Color bgColorTextTrips =Color(0xffDADADA);
   static Color bgColorOutBoardingButton =Color(0xffB2B2B2);
   static const Color bgColorTextField = Color(0xffF8F9FA);
+  static const Color bgColorClose = Color(0xffF5F5F5);
 
 }

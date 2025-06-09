@@ -32,4 +32,11 @@ class ManagerStrings {
   static const String enterTheNewPassword = 'ادخل كلمة المرور الجديدة ';
   static const String reEnterTheNewPassword = 'اعد ادخال كلمة المرور الجديدة';
   static const String changePassword = 'تغيير كلمة السر';
+  static const String fromTheRegion = 'من منطقة';
+  static const String selectTheRegion = 'اختر المنطقة';
+  static const String toTheArea = 'إلى منطقة';
+  static const String chooseYourStartingArea = 'اختر منطقة الانطلاق';
+  static const String tripHistory = 'تاريخ الرحلة';
+  static const String selectADate = 'اختر تاريخ';
+  static const String findATrip = 'ابحث عن رحلة';
 }
