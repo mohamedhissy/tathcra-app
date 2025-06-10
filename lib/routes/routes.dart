@@ -9,6 +9,7 @@ import '../features/auth/presentaion/view/register_view.dart';
 import '../features/auth/presentaion/view/reset_password_view.dart';
 import '../features/auth/presentaion/view/verification_code_view.dart';
 import '../features/out_boarding/presentaion/view/out_boarding_view.dart';
+import '../features/reservations/presentaion/view/reservations_view.dart';
 
 class Routes {
   static const String outBoardingView = '/out_boarding_view';
@@ -23,6 +24,7 @@ class Routes {
   static const String verificationCodeView = '/verification_code_view';
   static const String emailView = '/email_view';
   static const String resetPasswordView = '/reset_password_view';
+  static const String reservationsView = '/reservations_view';
 
 }
 
@@ -45,6 +47,9 @@ class RouteGenerator {
       case Routes.homeView:
         initHome();
         return MaterialPageRoute(builder: (_) => const HomeView());
+      case Routes.reservationsView:
+        initReservations();
+        return MaterialPageRoute(builder: (_) => const ReservationsView());
       default:
         return unDefineRoute();
     }

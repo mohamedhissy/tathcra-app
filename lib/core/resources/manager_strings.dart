@@ -39,4 +39,6 @@ class ManagerStrings {
   static const String tripHistory = 'تاريخ الرحلة';
   static const String selectADate = 'اختر تاريخ';
   static const String findATrip = 'ابحث عن رحلة';
+  static const String yesterday = 'أمس';
+  static const String tomorrow = 'غداً';
 }
