@@ -581,7 +581,6 @@ class _ChooseYourSeatViewState extends State<ChooseYourSeatView> {
               ),
             ],
           ),
-          // المقود على يمين الصفين العلويين فقط
           SizedBox(width: 12),
           Column(
             children: [
@@ -589,8 +588,8 @@ class _ChooseYourSeatViewState extends State<ChooseYourSeatView> {
                 width: 70,
                 height: 80, // ارتفاع صفين
                 decoration: BoxDecoration(
-                  color: Colors.blueAccent,
-                  borderRadius: BorderRadius.circular(10),
+                  color: ManagerColors.primaryColor,
+                  borderRadius: BorderRadius.circular(15),
                 ),
                 child: Container(
                   decoration: BoxDecoration(
@@ -612,29 +611,53 @@ class _ChooseYourSeatViewState extends State<ChooseYourSeatView> {
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: Text('اختر الجنس'),
-          actions: [
-            TextButton(
-              onPressed: () {
-                setState(() {
-                  selectedBlueSeats.add(seatNum);
-                  selectedRedSeats.remove(seatNum);
-                });
-                Navigator.of(context).pop();
-              },
-              child: Text('ذكر'),
-            ),
-            TextButton(
-              onPressed: () {
-                setState(() {
-                  selectedRedSeats.add(seatNum);
-                  selectedBlueSeats.remove(seatNum);
-                });
-                Navigator.of(context).pop();
-              },
-              child: Text('أنثى'),
-            ),
-          ],
+          backgroundColor: Colors.white,
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('اختر الجنس',),
+            ],
+          ),
+          content: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              GestureDetector(
+                onTap: () {
+                  setState(() {
+                    selectedRedSeats.add(seatNum);
+                    selectedBlueSeats.remove(seatNum);
+                  });
+                  Navigator.of(context).pop();
+                },
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 12),
+                  decoration: BoxDecoration(
+                    color: ManagerColors.secondaryColor,
+                    borderRadius: BorderRadius.circular(18),
+                  ),
+                  child: const Text('أنثى', style: TextStyle(color: Colors.white, fontSize: 18)),
+                ),
+              ),
+              const SizedBox(width: 16),
+              GestureDetector(
+                onTap: () {
+                  setState(() {
+                    selectedBlueSeats.add(seatNum);
+                    selectedRedSeats.remove(seatNum);
+                  });
+                  Navigator.of(context).pop();
+                },
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 12),
+                  decoration: BoxDecoration(
+                    color: ManagerColors.primaryColor,
+                    borderRadius: BorderRadius.circular(18),
+                  ),
+                  child: const Text('ذكر', style: TextStyle(color: Colors.white, fontSize: 18)),
+                ),
+              ),
+            ],
+          ),
         );
       },
     );
@@ -664,13 +687,13 @@ class SeatWidget extends StatelessWidget {
         color = Colors.white;
         break;
       case SeatStatus.booked:
-        color = Colors.red;
+        color = ManagerColors.secondaryColor;
         break;
       case SeatStatus.selectedRed:
-        color = Colors.red;
+        color = ManagerColors.secondaryColor;
         break;
       case SeatStatus.selectedBlue:
-        color = Colors.blue;
+        color = ManagerColors.primaryColor;
         break;
     }
 
@@ -681,11 +704,23 @@ class SeatWidget extends StatelessWidget {
         height: 35,
         decoration: BoxDecoration(
           color: color,
-          border: Border.all(color: Colors.black),
+          border: Border.all(
+            color: seat.status == SeatStatus.selectedRed || seat.status == SeatStatus.booked
+                ? ManagerColors.secondaryColor
+                : seat.status == SeatStatus.selectedBlue
+                    ? ManagerColors.primaryColor
+                    : Colors.black,
+          ),
           borderRadius: BorderRadius.circular(6),
         ),
         child: Center(
-          child: Text('${seat.number}', style: const TextStyle(fontSize: 12)),
+          child: Text(
+            '${seat.number}',
+            style: TextStyle(
+              fontSize: 12,
+              color: seat.status == SeatStatus.available ? Colors.black : Colors.white,
+            ),
+          ),
         ),
       ),
     );
