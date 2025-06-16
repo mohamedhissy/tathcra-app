@@ -8,6 +8,7 @@ import '../../../../core/resources/manager_font_weight.dart';
 import '../../../../core/resources/manager_height.dart';
 import '../../../../core/resources/manager_strings.dart';
 import '../../../../core/resources/manager_width.dart';
+import '../../../../routes/routes.dart';
 
 class ChooseYourSeatView extends StatefulWidget {
   const ChooseYourSeatView({super.key});
@@ -228,176 +229,215 @@ class _ChooseYourSeatViewState extends State<ChooseYourSeatView> {
             ),
             child: Padding(
               padding: const EdgeInsets.all(16.0),
-              child: Column(
-                children: [
-                  SizedBox(height: ManagerHeight.h20,),
-                  Container(
-                    margin: EdgeInsets.symmetric(horizontal: ManagerWidth.w30),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    SizedBox(height: ManagerHeight.h20,),
+                    Container(
+                      margin: EdgeInsets.symmetric(horizontal: ManagerWidth.w30),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Text('09:15',style: TextStyle(
+                                fontSize: ManagerFontSizes.s24,
+                                fontWeight: ManagerFontWeight.w800,
+                              ),),
+                              Icon(Icons.timer_sharp,color: ManagerColors.primaryColor,size: 32,),
+                            ],
+                          ),
+                          Text('الشركة الأولى',style: TextStyle(
+                            fontSize: ManagerFontSizes.s24,
+                            fontWeight: ManagerFontWeight.w800,
+                          ),),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: ManagerHeight.h4,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Row(
-                          children: [
-                            Text('09:15',style: TextStyle(
-                              fontSize: ManagerFontSizes.s24,
-                              fontWeight: ManagerFontWeight.w800,
-                            ),),
-                            Icon(Icons.timer_sharp,color: ManagerColors.primaryColor,size: 32,),
-                          ],
-                        ),
-                        Text('الشركة الأولى',style: TextStyle(
-                          fontSize: ManagerFontSizes.s24,
-                          fontWeight: ManagerFontWeight.w800,
+                        Text('ساعات',style: TextStyle(
+                          fontWeight: ManagerFontWeight.regular,
+                          fontSize: ManagerFontSizes.s16,
+                          color: ManagerColors.grey,
+                        ),),
+                        SizedBox(width: ManagerWidth.w6,),
+                        Text('5',style: TextStyle(
+                          fontWeight: ManagerFontWeight.regular,
+                          fontSize: ManagerFontSizes.s16,
+                          color: ManagerColors.grey,
+                        ),),
+                        SizedBox(width: ManagerWidth.w6,),
+                        Text('المدة المتوقعة',style: TextStyle(
+                          fontWeight: ManagerFontWeight.regular,
+                          fontSize: ManagerFontSizes.s16,
+                          color: ManagerColors.grey,
                         ),),
                       ],
                     ),
-                  ),
-                  SizedBox(height: ManagerHeight.h4,),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text('ساعات',style: TextStyle(
-                        fontWeight: ManagerFontWeight.regular,
-                        fontSize: ManagerFontSizes.s16,
-                        color: ManagerColors.grey,
-                      ),),
-                      SizedBox(width: ManagerWidth.w6,),
-                      Text('5',style: TextStyle(
-                        fontWeight: ManagerFontWeight.regular,
-                        fontSize: ManagerFontSizes.s16,
-                        color: ManagerColors.grey,
-                      ),),
-                      SizedBox(width: ManagerWidth.w6,),
-                      Text('المدة المتوقعة',style: TextStyle(
-                        fontWeight: ManagerFontWeight.regular,
-                        fontSize: ManagerFontSizes.s16,
-                        color: ManagerColors.grey,
-                      ),),
-                    ],
-                  ),
-                  SizedBox(height: ManagerHeight.h14,),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'دمشق كراج ',
-                        style: TextStyle(
-                          fontSize: ManagerFontSizes.s18,
-                          fontWeight: ManagerFontWeight.bold,
-                          color: ManagerColors.black,
-                        ),
-                      ),
-                      SizedBox(width: ManagerWidth.w6),
-                      Container(
-                        padding: EdgeInsets.all(2),
-                        decoration: BoxDecoration(
-                          shape: BoxShape.rectangle,
-                          borderRadius: BorderRadius.circular(6),
-                          border: Border.all(
-                            color: ManagerColors.primaryColor,
+                    SizedBox(height: ManagerHeight.h14,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'دمشق كراج ',
+                          style: TextStyle(
+                            fontSize: ManagerFontSizes.s18,
+                            fontWeight: ManagerFontWeight.bold,
+                            color: ManagerColors.black,
                           ),
                         ),
-                        child: Icon(
-                          Icons.arrow_back,
-                          color: ManagerColors.primaryColor,
-                          size: 14,
-                        ),
-                      ),
-                      SizedBox(width: ManagerWidth.w6),
-                      Text(
-                        'كراج ادلب',
-                        style: TextStyle(
-                          fontSize: ManagerFontSizes.s18,
-                          fontWeight: ManagerFontWeight.bold,
-                          color: ManagerColors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: ManagerHeight.h20,),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text('ل.س',style: TextStyle(
-                        fontWeight: ManagerFontWeight.regular,
-                        fontSize: ManagerFontSizes.s16,
-                        color: ManagerColors.black,
-                      ),),
-                      SizedBox(width: ManagerWidth.w8,),
-                      Text('50.000',style: TextStyle(
-                        fontWeight: ManagerFontWeight.bold,
-                        fontSize: ManagerFontSizes.s20,
-                        color: ManagerColors.black,
-                      ),),
-                    ],
-                  ),
-                  SizedBox(height: ManagerHeight.h14,),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Row(
-                        children: [
-                          Text('محجوز-أنثى',style: TextStyle(
-                            fontSize: ManagerFontSizes.s14,
-                          ),),
-                          SizedBox(width: ManagerWidth.w4,),
-                          Container(
-                            width: ManagerWidth.w16,
-                            height: ManagerHeight.h16,
-                            decoration: BoxDecoration(
-                              color: ManagerColors.secondaryColor,
-                              borderRadius: BorderRadius.circular(5),
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(width: ManagerWidth.w12,),
-                      Row(
-                        children: [
-                          Text('محجوز-ذكر',style: TextStyle(
-                            fontSize: ManagerFontSizes.s14,
-                          ),),
-                          SizedBox(width: ManagerWidth.w4,),
-                          Container(
-                            width: ManagerWidth.w16,
-                            height: ManagerHeight.h16,
-                            decoration: BoxDecoration(
+                        SizedBox(width: ManagerWidth.w6),
+                        Container(
+                          padding: EdgeInsets.all(2),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.rectangle,
+                            borderRadius: BorderRadius.circular(6),
+                            border: Border.all(
                               color: ManagerColors.primaryColor,
-                              borderRadius: BorderRadius.circular(5),
                             ),
                           ),
-                        ],
-                      ),
-                      SizedBox(width: ManagerWidth.w12,),
-                      Row(
-                        children: [
-                          Text('مقعد متاح',style: TextStyle(
-                            fontSize: ManagerFontSizes.s14,
-                          ),),
-                          SizedBox(width: ManagerWidth.w4,),
-                          Container(
-                            width: ManagerWidth.w16,
-                            height: ManagerHeight.h16,
-                            decoration: BoxDecoration(
-                              color: ManagerColors.white,
-                              borderRadius: BorderRadius.circular(5),
-                              border: Border.all(
-                                color: ManagerColors.bgColorOutBoardingButton,
+                          child: Icon(
+                            Icons.arrow_back,
+                            color: ManagerColors.primaryColor,
+                            size: 14,
+                          ),
+                        ),
+                        SizedBox(width: ManagerWidth.w6),
+                        Text(
+                          'كراج ادلب',
+                          style: TextStyle(
+                            fontSize: ManagerFontSizes.s18,
+                            fontWeight: ManagerFontWeight.bold,
+                            color: ManagerColors.black,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: ManagerHeight.h20,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text('ل.س',style: TextStyle(
+                          fontWeight: ManagerFontWeight.regular,
+                          fontSize: ManagerFontSizes.s16,
+                          color: ManagerColors.black,
+                        ),),
+                        SizedBox(width: ManagerWidth.w8,),
+                        Text('50.000',style: TextStyle(
+                          fontWeight: ManagerFontWeight.bold,
+                          fontSize: ManagerFontSizes.s20,
+                          color: ManagerColors.black,
+                        ),),
+                      ],
+                    ),
+                    SizedBox(height: ManagerHeight.h14,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Row(
+                          children: [
+                            Text('محجوز-أنثى',style: TextStyle(
+                              fontSize: ManagerFontSizes.s14,
+                            ),),
+                            SizedBox(width: ManagerWidth.w4,),
+                            Container(
+                              width: ManagerWidth.w16,
+                              height: ManagerHeight.h16,
+                              decoration: BoxDecoration(
+                                color: ManagerColors.secondaryColor,
+                                borderRadius: BorderRadius.circular(5),
                               ),
                             ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 14.0),
-                      child: buildSeatsWithPadding(paddedSeatRows),
+                          ],
+                        ),
+                        SizedBox(width: ManagerWidth.w12,),
+                        Row(
+                          children: [
+                            Text('محجوز-ذكر',style: TextStyle(
+                              fontSize: ManagerFontSizes.s14,
+                            ),),
+                            SizedBox(width: ManagerWidth.w4,),
+                            Container(
+                              width: ManagerWidth.w16,
+                              height: ManagerHeight.h16,
+                              decoration: BoxDecoration(
+                                color: ManagerColors.primaryColor,
+                                borderRadius: BorderRadius.circular(5),
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(width: ManagerWidth.w12,),
+                        Row(
+                          children: [
+                            Text('مقعد متاح',style: TextStyle(
+                              fontSize: ManagerFontSizes.s14,
+                            ),),
+                            SizedBox(width: ManagerWidth.w4,),
+                            Container(
+                              width: ManagerWidth.w16,
+                              height: ManagerHeight.h16,
+                              decoration: BoxDecoration(
+                                color: ManagerColors.white,
+                                borderRadius: BorderRadius.circular(5),
+                                border: Border.all(
+                                  color: ManagerColors.bgColorOutBoardingButton,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
-                  ),
-                ],
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 14.0),
+                        child: buildSeatsWithPadding(paddedSeatRows),
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(ManagerStrings.bestChoiceOfYourSeat,style: TextStyle(
+                          fontSize: ManagerFontSizes.s16,
+                          fontWeight: ManagerFontWeight.regular,
+                        ),),
+                      ],
+                    ),
+                    SizedBox(height: ManagerHeight.h4,),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        minimumSize: Size(ManagerWidth.w200, ManagerHeight.h50),
+                        backgroundColor: ManagerColors.primaryColor,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        elevation: 0, 
+                        padding: EdgeInsets.zero,
+                      ),
+                      onPressed: (){
+                        Navigator.pushReplacementNamed(context, Routes.chooseYourSeatView);
+                      },
+                      child: Container(
+                        width: ManagerWidth.w200,
+                        height: ManagerHeight.h50,
+                        child: Center(
+                          child: Text(
+                            ManagerStrings.approvalAndConfirmationOfReservation,style: TextStyle(
+                            fontWeight: ManagerFontWeight.w600,
+                            fontSize: ManagerFontSizes.s18,
+                            color: ManagerColors.white,
+                          ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

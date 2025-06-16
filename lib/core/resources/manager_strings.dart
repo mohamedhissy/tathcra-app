@@ -44,4 +44,6 @@ class ManagerStrings {
   static const String numberOfSeats = 'عدد المقاعد';
   static const String enterReservationData = 'ادخال بيانات الحجز';
   static const String chooseYourSeat = 'اختار مكان مقعدك';
+  static const String bestChoiceOfYourSeat = 'تفضل باختيار مقعدك';
+  static const String approvalAndConfirmationOfReservation = 'الموافقة وتأكيد الحجز';
 }
