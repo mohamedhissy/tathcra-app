@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         Locale('en'),
       ],
       debugShowCheckedModeBanner: false,
-      initialRoute: Routes.reservationsView,
+      initialRoute: Routes.confirmReservationView,
       onGenerateRoute: RouteGenerator.getRoute,
     );
   }

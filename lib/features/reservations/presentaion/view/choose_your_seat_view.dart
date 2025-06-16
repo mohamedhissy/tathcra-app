@@ -258,7 +258,7 @@ class _ChooseYourSeatViewState extends State<ChooseYourSeatView> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('ساعات',style: TextStyle(
+                        Text(ManagerStrings.hours,style: TextStyle(
                           fontWeight: ManagerFontWeight.regular,
                           fontSize: ManagerFontSizes.s16,
                           color: ManagerColors.grey,
@@ -270,7 +270,7 @@ class _ChooseYourSeatViewState extends State<ChooseYourSeatView> {
                           color: ManagerColors.grey,
                         ),),
                         SizedBox(width: ManagerWidth.w6,),
-                        Text('المدة المتوقعة',style: TextStyle(
+                        Text(ManagerStrings.expectedDuration,style: TextStyle(
                           fontWeight: ManagerFontWeight.regular,
                           fontSize: ManagerFontSizes.s16,
                           color: ManagerColors.grey,
@@ -339,7 +339,7 @@ class _ChooseYourSeatViewState extends State<ChooseYourSeatView> {
                       children: [
                         Row(
                           children: [
-                            Text('محجوز-أنثى',style: TextStyle(
+                            Text(ManagerStrings.reservedFemale,style: TextStyle(
                               fontSize: ManagerFontSizes.s14,
                             ),),
                             SizedBox(width: ManagerWidth.w4,),
@@ -356,7 +356,7 @@ class _ChooseYourSeatViewState extends State<ChooseYourSeatView> {
                         SizedBox(width: ManagerWidth.w12,),
                         Row(
                           children: [
-                            Text('محجوز-ذكر',style: TextStyle(
+                            Text(ManagerStrings.reservedMale,style: TextStyle(
                               fontSize: ManagerFontSizes.s14,
                             ),),
                             SizedBox(width: ManagerWidth.w4,),
@@ -373,7 +373,7 @@ class _ChooseYourSeatViewState extends State<ChooseYourSeatView> {
                         SizedBox(width: ManagerWidth.w12,),
                         Row(
                           children: [
-                            Text('مقعد متاح',style: TextStyle(
+                            Text(ManagerStrings.seatAvailable,style: TextStyle(
                               fontSize: ManagerFontSizes.s14,
                             ),),
                             SizedBox(width: ManagerWidth.w4,),

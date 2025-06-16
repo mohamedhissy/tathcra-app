@@ -46,4 +46,12 @@ class ManagerStrings {
   static const String chooseYourSeat = 'اختار مكان مقعدك';
   static const String bestChoiceOfYourSeat = 'تفضل باختيار مقعدك';
   static const String approvalAndConfirmationOfReservation = 'الموافقة وتأكيد الحجز';
+  static const String expectedDuration = 'المدة المتوقعة';
+  static const String hours = 'ساعات';
+  static const String reservedFemale = 'محجوز-أنثى';
+  static const String reservedMale = 'محجوز-ذكر';
+  static const String seatAvailable = 'مقعد متاح';
+  static const String remainingTime = 'الوقت المتبقي';
+  static const String seats = 'seats';
+  static const String copyLink = 'نسخ الرابط';
 }

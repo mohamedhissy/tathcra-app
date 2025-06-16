@@ -11,6 +11,8 @@ import '../features/auth/presentaion/view/verification_code_view.dart';
 import '../features/out_boarding/presentaion/view/out_boarding_view.dart';
 import '../features/reservations/presentaion/view/choose_your_seat_view.dart';
 import '../features/reservations/presentaion/view/reservations_view.dart';
+import '../features/success/presentaion/view/confirm_reservation_view.dart';
+import '../features/success/presentaion/view/success_view.dart';
 
 class Routes {
   static const String outBoardingView = '/out_boarding_view';
@@ -27,6 +29,8 @@ class Routes {
   static const String resetPasswordView = '/reset_password_view';
   static const String reservationsView = '/reservations_view';
   static const String chooseYourSeatView = '/choose_your_seat_view';
+  static const String successView = '/success_view';
+  static const String confirmReservationView = '/confirm_reservation_view';
 
 }
 
@@ -55,6 +59,10 @@ class RouteGenerator {
       case Routes.chooseYourSeatView:
         initReservations();
         return MaterialPageRoute(builder: (_) => const ChooseYourSeatView());
+      case Routes.successView:
+        return MaterialPageRoute(builder: (_) => const SuccessView());
+      case Routes.confirmReservationView:
+        return MaterialPageRoute(builder: (_) => const ConfirmReservationView());
       default:
         return unDefineRoute();
     }
