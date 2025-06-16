@@ -41,4 +41,7 @@ class ManagerStrings {
   static const String findATrip = 'ابحث عن رحلة';
   static const String yesterday = 'أمس';
   static const String tomorrow = 'غداً';
+  static const String numberOfSeats = 'عدد المقاعد';
+  static const String enterReservationData = 'ادخال بيانات الحجز';
+  static const String chooseYourSeat = 'اختار مكان مقعدك';
 }

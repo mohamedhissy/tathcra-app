@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class ManagerColors {
   static const Color primaryColor = Color(0xff2E6AFF);
-  static Color secondaryColor = Color(0xff2196F3FF);
+  static Color secondaryColor = Color(0xffE74C3C);
   static Color brown200 = Colors.brown.shade300;
   static Color transparent = Colors.transparent;
   static Color blue = Colors.blue;
@@ -42,5 +42,6 @@ class ManagerColors {
   static Color bgColorOutBoardingButton =Color(0xffB2B2B2);
   static const Color bgColorTextField = Color(0xffF8F9FA);
   static const Color bgColorClose = Color(0xffF5F5F5);
+  static const Color bgColorCounter = Color(0xffDADADA);
 
 }

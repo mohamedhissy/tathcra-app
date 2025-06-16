@@ -5,12 +5,21 @@ class ReservationsController extends GetxController {
   AppSettingsSharedPreferences appSettingsSharedPreferences =
   AppSettingsSharedPreferences();
 
-  // متغير يتحكم بالتوسعة
-  var isExpanded = false.obs;
+  final containerHeight = 200.0.obs;
+  RxInt seatCount = 0.obs;
 
-// دالة تبديل الحالة
-  void toggleExpansion() {
-    isExpanded.value = !isExpanded.value;
+
+  void toggleHeight() {
+    containerHeight.value =
+    containerHeight.value == 200.0 ? 400.0 : 200.0;
+  }
+
+  void incrementSeats() {
+    seatCount++;
+  }
+
+  void decrementSeats() {
+    if (seatCount > 0) seatCount--;
   }
 
 

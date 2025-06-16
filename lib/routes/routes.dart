@@ -9,6 +9,7 @@ import '../features/auth/presentaion/view/register_view.dart';
 import '../features/auth/presentaion/view/reset_password_view.dart';
 import '../features/auth/presentaion/view/verification_code_view.dart';
 import '../features/out_boarding/presentaion/view/out_boarding_view.dart';
+import '../features/reservations/presentaion/view/choose_your_seat_view.dart';
 import '../features/reservations/presentaion/view/reservations_view.dart';
 
 class Routes {
@@ -25,6 +26,7 @@ class Routes {
   static const String emailView = '/email_view';
   static const String resetPasswordView = '/reset_password_view';
   static const String reservationsView = '/reservations_view';
+  static const String chooseYourSeatView = '/choose_your_seat_view';
 
 }
 
@@ -50,6 +52,9 @@ class RouteGenerator {
       case Routes.reservationsView:
         initReservations();
         return MaterialPageRoute(builder: (_) => const ReservationsView());
+      case Routes.chooseYourSeatView:
+        initReservations();
+        return MaterialPageRoute(builder: (_) => const ChooseYourSeatView());
       default:
         return unDefineRoute();
     }
